@@ -19,19 +19,40 @@ interface Ship {
  * - A player wins *game* when opposing player has no live ships 
  * - Shoots missiles and HITS or MISSES 
  */
-class Player {
-  ships: {
-    carrier: true,
-    battleship: true,
-    cruiser: true,
-    submarine: true,
-    destroyer: true
+class PlayerGrid {
+  name: string;
+  ships: object;
+  grid: Number[][];
+
+  constructor(name: string) {
+    this.name = name;
+
+    this.ships = {
+      carrier: true,
+      battleship: true,
+      cruiser: true,
+      submarine: true,
+      destroyer: true
+    }
   }
 
-  field
+  //place one of the ships on your grid
+  placeShip(shipName: string): void {
+
+  }
+
+  // attack from opposing team
+  // coords gives a letter and number e.g A1
+  // returns string for whether there is a hit or miss
+  attackShip(coords: string): string {
+    
+    return ''
+  }
+  
 }
 /** Game
  * logs events in the game
  * reports victory/loss and end of game
  * 
  */
+
